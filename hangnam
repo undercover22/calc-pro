@@ -1,0 +1,95 @@
+#HANG1
+Disp "  +---|"
+
+If G=0:Then
+Disp "      |"
+Disp "      |"
+Disp "      |"
+Disp "      |"
+Disp "      |"
+End
+If G=1:Then
+Disp "  O   |"
+Disp "      |"
+Disp "      |"
+Disp "      |"
+Disp "      |"
+End
+If G=2:Then
+Disp "  O   |"
+Disp "  |   |"
+Disp "  |   |"
+Disp "      |"
+Disp "      |"
+End
+If G=3:Then
+Disp "  O / |"
+Disp "  |/  |"
+Disp "  |   |"
+Disp "      |"
+Disp "      |"
+End
+If G=4:Then
+Disp "\ O / |"
+Disp " \|/  |"
+Disp "  |   |"
+Disp "      |"
+Disp "      |"
+End
+If G=5:Then
+Disp "\ O / |"
+Disp " \|/  |"
+Disp "  |   |"
+Disp " /    |"
+Disp "/     |"
+End
+If G=6:Then
+Disp "\ O / |"
+Disp " \|/  |"
+Disp "  |   |"
+Disp " / \  |"
+Disp "/   \ |"
+End
+
+
+
+
+#HANGMAN 
+0→G
+" "→Str5
+" "→Str2
+Lbl V
+" "→Str3
+prgmHANG1
+" "→Str4
+"DETAIL"→Str1
+length(Str1)→L
+Str5+Str2→Str5
+For(X,1,L)
+sub(Str1,X,1)→Str4
+inString(Str5,Str4)→P
+If P:Then
+Str3+sub(Str5,P,1)→Str3
+Else
+Str3+"-"→Str3
+End
+End
+
+Disp sub(Str3,2,length(Str3)-1)
+If " "+Str1=Str3:Then
+Output(2,9,"WINNER!!")
+")
+Output(3,8,"GAME OVER")
+Stop
+End
+If G≥6:Then
+Output(2,10,"DEAD!")
+Output(3,8,"GAME OVER")
+Stop
+End
+Input Str2
+If not(inString(Str1,Str2):Then
+G+1→G
+End
+Goto V
+
