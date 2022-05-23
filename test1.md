@@ -1,7 +1,13 @@
 # calc-pro
 
-
-
+ClrHome
+:Output(1,1,"-/-/-/-/-/-/-/-/
+:Output(2,3,"HANGMAN 
+:Output(3,1,"-/-/-/-/-/-/-/-/
+:Output(5,1,"PROGRAMMED BY
+:Output(6,1,"NAMES 
+:Pause
+:ClrHome
 
 
 
@@ -9,12 +15,12 @@
 
 
 :"ABCDEFGHIJKLMNOPQRSTUVWXYZ→Str0
-:Repeat 30>length(Str1
+:Repeat 33>length(Str1
 :ClrHome
-:Disp "ENTER A WORD: (29 CHARS)
+:Disp "WHAT WORD? (32 CHARS)
 :Input "",Str1
 :End
-:"GUESS A LETTER:→Str2
+:"?→Str2
 :For(I,1,length(Str1
 :sub(Str1,I,1
 :If inString(Str0,Ans:"-
